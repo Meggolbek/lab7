@@ -10,4 +10,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	//$(".likeBtn").click( ga("send", "event", 'like', 'click'));
+    $(".likeBtn").click(function(e){
+        gtag('event', 'click', {
+            'event_category': 'like',
+            'event_label': 'user clicked like',
+            'value': 1
+        });
+    });
 }
